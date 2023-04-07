@@ -18,7 +18,7 @@ def create_zip_file():
             if os.path.exists(filename):
                 archive.write(filename, os.path.basename(filename))
             else:
-                print(f'Файл {filename} не найден.')
+                print(f'Файла с именем {filename} нет.')
         archive.close()
 
 
