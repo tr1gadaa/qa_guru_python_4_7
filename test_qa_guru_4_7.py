@@ -1,10 +1,7 @@
 import zipfile
 import PyPDF2
-from PyPDF2 import PdfReader
 import pytest
 from openpyxl import load_workbook
-from openpyxl import workbook
-import csv
 import os
 
 
@@ -35,7 +32,7 @@ def test_check_csv(create_zip_file):
     with zipfile.ZipFile("resources/archive.zip", "r") as archive:
         with archive.open("example_csv.csv", "r") as file_csv:
             row = [row for row in file_csv]
-            assert row[0] == b'Login email;Identifier;First name;Last name\n'
+            assert row[0] == b'Login email;Identifier;First name;Last name\r\n'
             assert row[1] == b'laura@example.com;2070;Laura;Grey\n'
 
 

@@ -1,6 +1,5 @@
 pytest
 selenium
 requests
-selene==2.0.0b17
 PyPDF2
 openpyxl
